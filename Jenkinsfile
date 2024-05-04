@@ -2,11 +2,11 @@ pipeline {
     agent any
     
     environment {
-        OPENSHIFT_SERVER = 'https://your-openshift-server-url'
+        OPENSHIFT_SERVER = 'https://api.ocp412.networknuts.lab:6443'
         OPENSHIFT_TOKEN = credentials('openshift-service-account-token')
-        OPENSHIFT_NAMESPACE = 'your-openshift-namespace'
-        GIT_REPO_URL = 'https://github.com/your/repo.git'
-        DEPLOYMENT_YAML_PATH = 'path/to/deployment.yaml'
+        OPENSHIFT_NAMESPACE = 'devops-pipeline'
+        GIT_REPO_URL = 'https://github.com/arytmw/jenkins-openshift-pipeline.git'
+        DEPLOYMENT_YAML_PATH = 'deployment.yml'
     }
     
     stages {
